@@ -50,4 +50,33 @@ I found a [web page](http://davidb.github.io/scala-maven-plugin/usage.html) that
 
 I found info on formating the README.md [here](https://help.github.com/articles/basic-writing-and-formatting-syntax/).
 
+The above is just a hint with respect to setting up a pom.xml to include building with scala files.
+
+In reality I had to add the following dependency.
+
+````
+        <dependency>
+            <groupId>org.scala-lang</groupId>
+            <artifactId>scala-library</artifactId>
+            <version>2.12.2</version>
+        </dependency>
+````
+Here is the plugin section that needs to be added to plugins section of the build section of the pom.xml.
+````
+            <plugin>
+                <groupId>net.alchim31.maven</groupId>
+                <artifactId>scala-maven-plugin</artifactId>
+                <version>3.2.1</version>
+                <executions>
+                    <execution>
+                        <goals>
+                            <goal>compile</goal>
+                            <goal>testCompile</goal>
+                        </goals>
+                    </execution>
+                </executions>
+                <configuration/>
+            </plugin>
+````
+
 
