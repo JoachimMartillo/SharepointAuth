@@ -78,5 +78,11 @@ Here is the plugin section that needs to be added to plugins section of the buil
                 <configuration/>
             </plugin>
 ````
+In the CoursesClientRequest.scala file, when the translation from Java to Scala was less than obvious I either added a specific comment or left the original Java line as a comment.
+
+Note in particular that the Scala classOf method does not seem to work with a single-instance object like CoursesClientRequest -- hence the different logic in setting up the logger.
+
+Note also that Scala has logic built-in to infer types. If I had used that feature the translation from Java to Scala would probably have been less clear.
+
 
 

@@ -17,6 +17,7 @@ import org.slf4j.LoggerFactory
 import java.util.List
 
 object CoursesClientRequest {
+  //private static final Logger logger = LoggerFactory.getLogger( CoursesClientRequest.class );
   val logger: Logger = LoggerFactory.getLogger(CoursesClientRequest.getClass().toString(): String)
   var client: Client = null
   val applicationServiceURI: String = "http://localhost:3000/courses"
@@ -96,6 +97,8 @@ object CoursesClientRequest {
 
   @throws(classOf[RuntimeException])
   def sendGetRequest(str: String): Unit = {
+    // note that formal paramters are immutable in Scala.
+    // hence the assignment of the value to s
     var s: String = str
     logger.debug("argument: {}", str)
     if (s == null) s = ""
