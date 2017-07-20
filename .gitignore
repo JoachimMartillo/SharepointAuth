@@ -1,0 +1,12 @@
+# Created by .ignore support plugin (hsz.mobi)
+.gitignore
+.idea/coursesclient2.iml
+.idea/misc.xml
+.idea/modules.xml
+.idea/workspace.xml
+dependency-reduced-pom.xml
+lib/
+src/main/java/
+src/main/resources/
+src/test/
+target/
