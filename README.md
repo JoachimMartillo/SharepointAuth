@@ -1,21 +1,21 @@
-# coursesclient2
+# SharepointAuth
 Rewriting coursesclient in Scala -- more to show the project set up with maven and intelli-j than to show serious Scala coding.
 
 Sometime in the distant past, I installed Scala on my machine. As I remember, I just googled ubuntu scala install for instructions.
 
 Initially I called this github repository coursesclientscala, but this name confused intellij on import, and I could not add in the frameworks that I tend to use.
 
-When I renamed the github repository coursesclient2, imported it, and then tried Add Framework Support, all the standard options were available.
+When I renamed the github repository SharepointAuth, imported it, and then tried Add Framework Support, all the standard options were available.
 
 I set up this project as I did the coursesclient project changed the artifact id in the pom.xml file as follows.
 
-<artifactId>coursesclient2</artifactId>
+<artifactId>SharepointAuth</artifactId>
 
 Of course, it was not yet possible to create a Scala class.
 
 I had to use File->Settings->plugins to get the Scala plugin.
 
-Then I had to add Scala framework support by right clicking on coursesclient2 and selecting Add Frame Support.
+Then I had to add Scala framework support by right clicking on SharepointAuth and selecting Add Frame Support.
 
 Then I had to create the Scala ivy library via download. The prompts help the user through this procedure.
 
@@ -78,9 +78,9 @@ Here is the plugin section that needs to be added to plugins section of the buil
                 <configuration/>
             </plugin>
 ````
-In the CoursesClientRequest.scala file, when the translation from Java to Scala was less than obvious I either added a specific comment or left the original Java line as a comment.
+In the SharepointAuthRequest.scala file, when the translation from Java to Scala was less than obvious I either added a specific comment or left the original Java line as a comment.
 
-Note in particular that the Scala classOf method does not seem to work with a single-instance object like CoursesClientRequest -- hence the different logic in setting up the logger.
+Note in particular that the Scala classOf method does not seem to work with a single-instance object like SharepointAuthRequest -- hence the different logic in setting up the logger.
 
 Note also that Scala has logic built-in to infer types. If I had used that feature the translation from Java to Scala would probably have been less clear.
 

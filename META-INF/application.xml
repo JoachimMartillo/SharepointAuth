@@ -4,7 +4,7 @@
              xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/application_6.xsd"
              version="6">
 
-    <module id="coursesclient2-EJB">
+    <module id="SharepointAuth-EJB">
         <ejb>ejb.jar</ejb>
     </module>
 </application>

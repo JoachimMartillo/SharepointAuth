@@ -1,7 +1,7 @@
-package edu.webdev
+package com.webdev
 
 /**
-  * Created by algotrader on 6/19/17.
+  * Created by JoachimMartillo on 11/06/19.
   */
 
 import com.sun.jersey.api.client.Client
@@ -16,9 +16,9 @@ import org.slf4j.LoggerFactory
 
 import java.util.List
 
-object CoursesClientRequest {
-  //private static final Logger logger = LoggerFactory.getLogger( CoursesClientRequest.class );
-  val logger: Logger = LoggerFactory.getLogger(CoursesClientRequest.getClass().toString(): String)
+object SharepointAuthRequest {
+  //private static final Logger logger = LoggerFactory.getLogger( SharepointAuthRequest.class );
+  val logger: Logger = LoggerFactory.getLogger(SharepointAuthRequest.getClass().toString(): String)
   var client: Client = null
   val applicationServiceURI: String = "http://localhost:3000/courses"
   // should be configurable
